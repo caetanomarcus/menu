@@ -73,15 +73,16 @@ height: 40px;
     padding-top: 10px;
 }
 
-.navigators-list > li:nth-child(3){
+.navigators-list li{
     position: relative;
     cursor: pointer;
 }
 
 .registrationSystem{
-    position:absolute; 
+    position:absolute;
     background-color: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
 
 
 }
@@ -90,7 +91,8 @@ height: 40px;
     list-style: none;
     padding: 0;
     margin: 0;
-    
+    width: 100%;
+
 }
 
 .registrationSystem li {
@@ -194,7 +196,7 @@ margin-left: 10px;
 }
 
 .section-footer{
-    
+
     padding: 60px;
 }
 

@@ -19,17 +19,16 @@
             <p>Cooper</p>
         </div>
         <ul class="navigators-list">
-            <li>All Courses <i class="pi pi-chevron-down"></i></li>
-            <li>Calendars  <i class="pi pi-chevron-down"></i></li>
-            <li>Registration System  <i class="pi pi-chevron-down" (click)="clickRegistrationSystem()"></i></li>
-                <div class="registrationSystem">
-                    <ul>
-                        <li>blabla</li>
-                        <li>blabla</li>
-                        <li>blabla</li>
-                    </ul>
-                </div>
-            <li>Financial <i class="pi pi-chevron-down"></i></li>
+            <li *ngFor="let item of menuItems" (mouseleave)="ocultMenus()" >
+              {{item.name}}
+              <i class="pi pi-chevron-down" (click)="clickOpenMenu(item.name)"></i>
+              <div *ngIf="item.isOpen" class="registrationSystem">
+                <ul>
+                  <li  *ngFor="let subItem of item.subItems" (click)="visualizar(subItem.path)" > {{subItem.name
+                    }}</li>
+                </ul>
+              </div>
+              </li>
         </ul>
         <div class="icons">
             <i class="pi pi-facebook"></i>
@@ -37,7 +36,7 @@
             <i class="pi pi-map-marker"></i>
         </div>
     </div>
-    
+
 </header>
 
 
@@ -104,6 +103,6 @@
 </footer>
 
 
-<!-- 
+<!--
 
 <button (click)="visualizar()">Visualizar matrículas</button> -->
